@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>About page </h1>
+<p>This is a template</p>
+{% endblock %}
+
+{% block another_content %}
+   <h1>Hi, I'm an engineer who codes for fun:)</h1>
+   <h3> {{ my_header|capfirst|title }} </h3>
+   {{ my_title }}, Here is my number {{ my_number }}
+   <ul>
+      {% for my_list_item in my_list %}
+         {% if my_list_item == 2 %}
+            <li>{{ my_list_item|add:10 }}</li>
+         {% else %}
+            <li>{{ my_list_item }}</li>
+         {% endif %}
+
+      {% endfor %}
+   </ul>
+
+{% endblock %}

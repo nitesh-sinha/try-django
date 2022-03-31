@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <h1>Hello </h1>
+    {{ request.user.is_authenticated }}
+    <p>This is a template</p>
+{% endblock %}
+
+{% block inner_content %}
+     Ok I'm replaced
+{% endblock %}

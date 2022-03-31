@@ -1,0 +1,12 @@
+
+<!--This template overrides any of the in-app template if the template filenames match -->
+
+{% block content %}
+    <h1>{{ object.title }}</h1>
+    <p>{% if object.description %}
+            {{ object.description }}
+        {%else %}
+            Description coming soon
+        {% endif %}
+    </p>
+{% endblock %}
